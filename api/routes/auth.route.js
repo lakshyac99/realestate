@@ -1,6 +1,5 @@
 import express from "express";
 import { login, logout, register } from "../controllers/auth.controller.js";
-import prisma from "../lib/prisma.js";
 
 const router = express.Router();
 
@@ -78,4 +77,4 @@ router.post("/register",register)
 router.post("/login",login)
 router.post("/logout",logout)
 
-export default router; prisma;
+export default router;
