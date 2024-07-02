@@ -20,12 +20,8 @@ function Layout() {
 function RequireAuth() {
 
   const { currentUser  } = useContext(AuthContext)
-
-  if (!user) {
-    return <Navigate to="/login" />
-  }
   return (
-    currentUser && (
+    !currentUser ? <Navigate to="/login" /> : (
       <div className="layout">
         <div className="navbar">
           <Navbar />
