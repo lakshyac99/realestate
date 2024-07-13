@@ -12,6 +12,9 @@ function Navbar() {
   const fetch = useNotificationStore((state) => state.fetch);
   const number = useNotificationStore((state) => state.number);
 
+  // fetch()
+  if(currentUser) fetch()
+
   return (
     <nav>
       <div className="left">
